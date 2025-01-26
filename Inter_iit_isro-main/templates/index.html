@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coordinate Input</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        /* Styling adjustments */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000; /* Black background */
+            color: #fff; /* White text for contrast */
+            text-align: center; /* Center-align all text */
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo-container {
+            text-align: center; /* Center the logo */
+            margin: 20px 0; /* Add spacing around the logo */
+        }
+
+        .logo-container img {
+            width: 150px; /* Resize the logo */
+            height: auto; /* Maintain aspect ratio */
+            border: 3px solid #ff5722; /* Orange border around the logo */
+            border-radius: 8px; /* Rounded corners */
+        }
+
+        h1, h2, h3, h4 {
+            margin: 10px 0;
+        }
+
+        section {
+            margin: 30px auto;
+            width: 300px; /* Constrain the form to a reasonable width */
+            padding: 20px;
+            background-color: #333; /* Dark gray background for the form */
+            border-radius: 10px; /* Rounded corners for the form */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+        }
+
+        label, input, button {
+            display: block;
+            width: 100%; /* Ensure inputs take full width */
+            margin-bottom: 15px; /* Space between form elements */
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #28a745; /* Green button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838; /* Slightly darker green on hover */
+        }
+
+        p {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- Logo Section -->
+    <div class="logo-container">
+        <img src="https://w7.pngwing.com/pngs/87/618/png-transparent-indian-institute-of-remote-sensing-space-applications-centre-indian-space-research-organisation-department-of-space-logo-others-angle-text-logo.png" alt="ISRO Logo">
+    </div>
+
+    <!-- Title and Descriptions -->
+    <h1>Inter IIT Tech Meet 13.0</h1>
+    <h2>Team 79</h2>
+    <h3>Problem Statement by ISRO</h3>
+    <h4>Lunar Map Project</h4>
+
+    <!-- Form Section -->
+    <section>
+        {% if error %}
+            <p>{{ error }}</p>
+        {% endif %}
+        <form action="{{ url_for('map_view') }}" method="POST">
+            <label for="latitude">Target Latitude:</label>
+            <input type="number" id="latitude" name="latitude" step="any" required>
+
+            <label for="longitude">Target Longitude:</label>
+            <input type="number" id="longitude" name="longitude" step="any" required>
+
+            <button type="submit">Generate Map</button>
+        </form>
+    </section>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

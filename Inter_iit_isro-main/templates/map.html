@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Map</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .map-container {
+            width: 100%;
+            height: 100vh;
+        }
+        a {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: black;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <a href="{{ url_for('index') }}">&#8592; Back to Home</a>
+    <div class="map-container">
+        {{ map_html|safe }}
+    </div>
+</body>
+</html>
+
