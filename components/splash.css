@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Orbitron';
+    src: url('/fonts/Orbitron-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.splash{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0);
+    flex-direction: column-reverse;
+    color: aliceblue;
+    font-family: 'Orbitron';
+    font-size: 1.5rem;
+    
+}
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  
