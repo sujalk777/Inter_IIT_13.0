@@ -1,8 +1,8 @@
-# Inter IIT Tech Meet 13.0: Astronomy Challenge Solution
+# Inter IIT Tech Meet 13.0: Chandrayaan Moon Mapping Challenge 
 
 ## Overview
 
-This repository contains our solution to the Astronomy problem statement presented at the Inter IIT Tech Meet 13.0. The challenge, sponsored by ISRO, required participants to develop innovative solutions within the field of astronomy. ([interiit-tech.com](https://interiit-tech.com/problem-statement/?utm_source=chatgpt.com))
+This repository contains our solution to the Moon Mapping problem statement presented at the Inter IIT Tech Meet 13.0. The challenge, sponsored by ISRO, required participants to develop innovative solutions within the field of astronomy. ([interiit-tech.com](https://interiit-tech.com/problem-statement/?utm_source=chatgpt.com))
 
 ## Problem Statement
 
